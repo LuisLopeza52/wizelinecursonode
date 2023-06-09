@@ -1,20 +1,20 @@
 Carpeta github:
-*Screenshots para el flujo de creación de ramas: git branch, git checkout, git switch   
-*Screenshots para el flujo de unión y almacenamiento de ramas: git merge, git stash  
+Screenshots para el flujo de creación de ramas: git branch, git checkout, git switch   
+Screenshots para el flujo de unión y almacenamiento de ramas: git merge, git stash  
 Screenshot para el flujo de integración de ramas: git rebase, git cherry-pick  
 
 Carpeta Docker  
-*Dockerfile ejecutable   
-*Archivo de Docker Compose que permita levantar el contendor    
+Dockerfile ejecutable   
+Archivo de Docker Compose que permita levantar el contendor    
 
 
 Carpeta kafka:
 Tópicos replicados de Kafka   
 
 Carpeta AWS:
-*Impresiones de pantalla de la Función Lambda creada en la cuenta que permita la ejecución del código y REST Endpoint (o GraphQL Endpoint) de la API Gateway asociada a la función Lambda  
-*Captura de pantalla de logs en Cloudwatch    
+Impresiones de pantalla de la Función Lambda creada en la cuenta que permita la ejecución del código y REST Endpoint (o GraphQL Endpoint) de la API Gateway asociada a la función Lambda  
+Captura de pantalla de logs en Cloudwatch    
 
 Carpeta MongoDB:
-*Base de datos de MongoDB exportada  
+Base de datos de MongoDB exportada  
 Captura de pantalla de la base de datos replicada
