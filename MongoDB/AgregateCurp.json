@@ -1,0 +1,107 @@
+bd.createCollection {
+    "conversacion", {
+        validator: ($jsonSchema: {
+            bsonType: "object",
+            required: ["Id", "conversacion", "horaFechaCreacion"],
+            properties: {
+                id: {
+                    bsonType: "string",
+                    description: "identificador del mensaje",
+                },
+                conversacion: {
+                    bsonType: "string",
+                    minLength: 10,
+                    maxLength: 40,
+                    description: "nombre del usuario",
+					
+					...  "bitacoraMensaje",
+					...  "estatusMensaje"
+                },
+                horaFechaCreacion: {
+                    bsonType: "int"
+                    minimum: 18,
+                    maximum: 99,
+                    description: "Edad del usuario registrado"
+                }
+            }
+        }
+        }
+    }
+	
+	
+bd.conversacion {
+    "Id" :"231165465368"
+	"conversacion": [
+		{
+			"usereEmisor": "usuario01",
+			"userReceptor": "usuarios02",
+			"horaFechaCreacionMensaje": "12-02-2023"
+			"BitacoraMensaje":[
+				{
+					"idMensaje": "12686548646",
+					"estatusMensaje"["enviado","leido","reenviado"]
+				}
+			]
+		}
+	]
+	"horaFechaCreacion": "12-02-2023"  
+}
+
+
+
+------------------------
+
+db.inventory.find({
+    $and: [{
+            price: {
+                $ne: 1.99
+            }
+        }, {
+            price: {
+                $exists: true
+            }
+        }
+    ]
+})
+
+
+{$or: [{Description: {$regex: /blue/i}},{Title: {$regex: /blue/i}}]}
+
+{$or: [{ Title: {"$in":[/^sex/i,/^blue/i]}},{ Description:{"$in":[/^sex/i,/^blue/i]}}]}
+
+{ Title: { "$in": [/^sex/i,/^blue/i] } }
+db.users.find({ "name": { "$in": [/^Da/,/^Ali/] } })
+
+
+{$or: [{ Title: {"$in":[/^sex/i,/^blue/i]}},{ Description:{"$in":[/^sex/i,/^blue/i]}}]}
+
+
+/**
+ * newField: The new field name.
+ * expression: The new field expression.
+ */
+/**
+ * newField: The new field name.
+ * expression: The new field expression.
+ */
+{
+    curpchida: {
+        $concat: [{
+                $toUpper: {
+                    $substrCP: ["$Apellido_1", 0, 2]
+                }
+            }, {
+                $substrCP: ["$Apellido_2", 0, 1]
+            }, {
+                $substrCP: ["$Nombre", 0, 1]
+            }, {
+                $substrCP: ["$FechaDeNacimiento", 8, 9]
+            }, {
+                $substrCP: ["$FechaDeNacimiento", 3, 2]
+            }, {
+                $substrCP: ["$FechaDeNacimiento", 0, 2]
+            },
+            "$CodigoFinal"
+        ]
+    }
+}
